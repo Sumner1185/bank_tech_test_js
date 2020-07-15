@@ -1,0 +1,23 @@
+{
+  "name": "bank_tech_test_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sumner1185/bank_tech_test_js.git"
+  },
+  "author": "Alastair Sumner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sumner1185/bank_tech_test_js/issues"
+  },
+  "homepage": "https://github.com/Sumner1185/bank_tech_test_js#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "jest": "^26.1.0"
+  }
+}
