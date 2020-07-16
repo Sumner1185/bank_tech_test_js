@@ -1,14 +1,16 @@
 const SingleTransaction = require('../singleTransaction.js')
+var MockDate = require('mockdate');
 
 describe('SingleTransaction', function () {
   let transaction
 
   beforeEach(function () {
-    transaction = new SingleTransaction('16/07/2020', '100.00', '50.00', '500.00');
+    MockDate.set('07/15/2020');
+    transaction = new SingleTransaction('100.00', '50.00', '500.00');
   });
 
   test('should store a date when transaction is made', function () {
-    expect(transaction.date).toEqual('16/07/2020')
+    expect(transaction.getDate()).toEqual(new Date());
   });
 
   test('should store a credit amount when transaction is made', function () {
