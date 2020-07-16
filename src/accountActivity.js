@@ -1,4 +1,4 @@
-class Activity {
+class AccountActivity {
   constructor() {
     this.transactionList = []
   };
@@ -7,4 +7,4 @@ class Activity {
     this.transactionList.push([date, credit, debit, balance])
   };
 };
-module.exports = Activity
+module.exports = AccountActivity
