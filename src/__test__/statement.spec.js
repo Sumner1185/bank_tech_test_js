@@ -6,7 +6,7 @@ describe('Statement', function () {
   test('should have a header in the constructor', function () {
     statement = new Statement();
 
-    expect(statement.header).toEqual('date || credit || debit || balance');
+    expect(statement.statementList).toEqual(['date || credit || debit || balance']);
   });
 
   test('should be responsible for formatting date correctly', function () {
@@ -19,5 +19,15 @@ describe('Statement', function () {
       );
 
     expect(statement.formatDate(date())).toEqual('16/07/2020')
+  });
+
+  test('should return a printed statement', function () {
+    statement = new Statement();
+    const transactions = [
+      ['16/07/2020', '50.00', '', '50.00'],
+      ['16/07/2020', '', '25.00', '25.00']
+    ]
+
+    expect(statement.print(transactions)).toEqual('')
   });
 });

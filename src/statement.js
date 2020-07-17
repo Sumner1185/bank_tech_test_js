@@ -1,6 +1,15 @@
 class Statement {
   constructor () {
-    this.header = 'date || credit || debit || balance'
+    this.statementList = ['date || credit || debit || balance']
+  };
+
+  print = function(transactions) {
+    transactions.forEach( item => {
+      this.statementList.push(item.toString())
+    });
+    this.statementList.forEach( item => {
+      console.log(item)
+    });
   };
 
   formatDate = function (date) {
